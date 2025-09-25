@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main   # rama principal del repo
+  branch: main
 
-media_folder: "images/uploads"  # dónde guardar imágenes en el repo
-public_folder: "/images/uploads"
+media_folder: "images/uploads"     # Carpeta en tu repo donde guardar imágenes
+public_folder: "/images/uploads"   # Ruta pública para mostrar imágenes
 
 collections:
   - name: "paginas"
