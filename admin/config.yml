@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: radiopoweronline
+  branch: main
+  base_url: https://pruebarp.netlify.app/
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - file: "index.html"
+        label: "Inicio"
+        name: "inicio"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
