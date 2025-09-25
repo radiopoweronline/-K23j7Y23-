@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main   # rama principal del repo
+
+media_folder: "images/uploads"  # dónde guardar imágenes en el repo
+public_folder: "/images/uploads"
+
+collections:
+  - name: "paginas"
+    label: "Páginas"
+    files:
+      - file: "index.html"
+        label: "Inicio"
+        name: "inicio"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Entradas del Blog"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
